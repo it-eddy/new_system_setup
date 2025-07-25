@@ -5,6 +5,9 @@
 # curl
 sudo apt install curl
 
+# git
+sudo apt install git
+
 # cisco anyconnect (work VPN)
 sudo apt install openconnect network-manager-openconnect network-manager-openconnect-gnome
 
