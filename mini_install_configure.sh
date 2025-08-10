@@ -9,3 +9,8 @@ sudo apt install openssh-server -y
 # check if ssh is activated on demand, else activate it permanently
 systemctl is-enabled ssh.socket || sudo systemctl enable ssh
 
+
+
+### basic toolings
+sudo apt install -y curl git aptitude moreutils net-tools vim
+
