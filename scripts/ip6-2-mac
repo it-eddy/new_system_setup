@@ -10,4 +10,4 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-ip -6 neigh show | grep $1 | cut -d' ' -f5 | sort | uniq
+ip -6 neigh show | grep "$1 dev " | grep -v 'FAILED' | cut -d' ' -f5 | sort | uniq
