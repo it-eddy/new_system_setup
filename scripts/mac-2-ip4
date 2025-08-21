@@ -10,4 +10,4 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-arp -a | grep $1 | cut -d' ' -f2 | sed 's/^(//; s/)$//' | sort | uniq
+arp -a | grep " $1 " | cut -d' ' -f2 | sed 's/^(//; s/)$//' | sort | uniq
