@@ -1,0 +1,13 @@
+#! /bin/bash
+# (c) by it-eddy
+# https://github.com/it-eddy/new_system_setup/
+
+
+
+# check arguments
+if [ -z "$1" ]; then
+    echo "Usage: $0 <IPv4 address>"
+    exit 1
+fi
+
+arp -a | grep $1 | cut -d' ' -f4 | sort | uniq

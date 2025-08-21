@@ -1,0 +1,20 @@
+#!/bin/bash
+# (c) by it-eddy
+# https://github.com/it-eddy/new_system_setup/
+
+
+
+# check arguments
+if [ -z "$1" ]; then
+    echo "Usage: $0 <hostname> [dns-server]"
+    exit 1
+fi
+
+if [ -z "$2" ]; then
+    # standard DNS lookup
+    nslookup "$1" 2>/dev/null | grep 'Address: ' | cut -c10- | sort | uniq
+else
+    # specific DNS server
+    nslookup "$1" "$2" 2>/dev/null | grep 'Address: ' | cut -c10- | sort | uniq
+fi
+
