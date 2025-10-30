@@ -12,7 +12,9 @@ sudo apt install git
 sudo apt install openconnect network-manager-openconnect network-manager-openconnect-gnome
 
 # ms visual code
-curl -sSL 'https://packages.microsoft.com/keys/microsoft.asc' | gpg --dearmor | sudo tee '/usr/share/keyrings/microsoft.gpg' > /dev/null && echo -e "Types: deb\nURIs: https://packages.microsoft.com/repos/code\nSuites: stable\nComponents: main\nArchitectures: amd64 arm64 armhf\nSigned-By: /usr/share/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/vscode.sources >/dev/null && sudo apt update && sudo apt install code
+sudo snap install code --classic
+# alternative use debian package directly from ms
+# curl -sSL 'https://packages.microsoft.com/keys/microsoft.asc' | gpg --dearmor | sudo tee '/usr/share/keyrings/microsoft.gpg' > /dev/null && echo -e "Types: deb\nURIs: https://packages.microsoft.com/repos/code\nSuites: stable\nComponents: main\nArchitectures: amd64 arm64 armhf\nSigned-By: /usr/share/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/vscode.sources >/dev/null && sudo apt update && sudo apt install code
 
 # windscribe vpn
 wget 'https://windscribe.com/install/desktop/linux_deb_x64' -O '/tmp/windscribe_currnt.deb' -q && sudo dpkg -i '/tmp/windscribe_currnt.deb'
