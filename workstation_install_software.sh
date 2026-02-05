@@ -37,9 +37,6 @@ sudo apt install subversion
 # dev tools for debian
 sudo apt install devscripts debhelper
 
-# productivity tool
-sudo snap install keep-presence
-
 # editor
 sudo apt install vim
 
