@@ -12,5 +12,5 @@ systemctl is-enabled ssh.socket || sudo systemctl enable ssh
 
 
 ### basic toolings
-sudo apt install -y curl git aptitude moreutils net-tools vim
+sudo apt install -y curl git aptitude moreutils net-tools vim htop
 
